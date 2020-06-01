@@ -1,4 +1,4 @@
-/* /* /* /* /* /* /* You can add global styles to this file, and also import other style files */
+
 @import url('//fonts.googleapis.com/css?family=Roboto:400,400italic,500,700|Playfair+Display:400,400italic,700,700italic|Montserrat:400|Karla:400');
 body {
     font-family: Roboto;
@@ -99,6 +99,7 @@ body {
 .button.button-large {
     padding: 19px 22px;
 }
+
 
 
 div.card-header {
