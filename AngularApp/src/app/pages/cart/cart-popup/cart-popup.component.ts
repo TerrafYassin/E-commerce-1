@@ -1,3 +1,6 @@
+/**
+ * Created by andrew.yang on 7/28/2017.
+ */
 
 import {Component, HostBinding, ElementRef} from "@angular/core";
 import {CartService} from "../../../services/cart.service";

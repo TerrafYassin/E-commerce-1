@@ -16,7 +16,7 @@ import {CartService} from "../../services/cart.service";
                 </button>
             </div>
             <div class="header-logo-wrapper">
-                <img class="header-logo-image" src="" >
+                <img class="header-logo-image" src="./assets/imgs/logo.png" alt="Hero">
             </div>
             <div class="header-nav-wrapper">
                 <ul class="header-nav">
@@ -27,11 +27,27 @@ import {CartService} from "../../services/cart.service";
                         <a routerLink="/">SHOP<span class="fa fa-caret-down"></span></a>
                     </li>
                     <li class="header-nav-item">
-                        <a routerLink="/">JOURNAL</a>
+                        <a [routerLink]="['/product/list']">Products</a>
                     </li>
                     <li class="header-nav-item">
                         <a routerLink="/">MORE<span class="fa fa-caret-down"></span></a>
                     </li>
+                    <li class="header-nav-item">
+                        <button class="login100-form-btn" 
+                        [routerLink]="['login']"
+           				 class="btn btn-primary"
+         			   >
+							Sign up
+                        </button>
+                    </li>
+                    
+                    <!-- 
+                    <li class="header-nav-item">
+                        <a class="nav-link"
+                        [routerLink]="['login']"
+                        routerLinkActive="active">Sign Up</a>
+                     </li>
+                     -->
                 </ul>
             </div>
             <div class="header-cart-wrapper">
@@ -58,6 +74,12 @@ import {CartService} from "../../services/cart.service";
             <li>
                 <a routerLink="/">MORE</a>
             </li>
+            <li class="header-nav-item">
+                        <a class="nav-link"
+                        [routerLink]="['login']"
+                        routerLinkActive="active">Sign In|Sign Up</a>
+            </li>
+            
         </ul>
         <cart-popup></cart-popup>
     </div>

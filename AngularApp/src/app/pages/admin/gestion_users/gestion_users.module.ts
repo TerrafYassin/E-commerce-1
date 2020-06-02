@@ -1,4 +1,3 @@
-
 import {NgModule} from "@angular/core";
 import {RouterModule} from "@angular/router";
 import {gestion_usersP} from "./gestion_users.routes";

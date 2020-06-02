@@ -11,8 +11,18 @@ import { NgForm } from '@angular/forms';
 @Injectable()
 export class ProductService {
   private productUrl = "http://localhost:3000/products";
-
+  private utl ="../../assets/mock-data/products.json";
   constructor(public http: Http) { }
+
+
+getAllproductTest (){
+  return this.http.get(this.utl)
+  .map((res: Response) => res.json())
+  .catch((error: any) => Observable.throw(error || 'Server error'));
+
+}
+
+
 
   public getProducts() {
     return this.http.get(this.productUrl)
@@ -35,6 +45,12 @@ export class ProductService {
   deleteProduct(_id: string) {
     return this.http.delete(this.productUrl + `/${_id}`);
   }
+
+
+  /*     onSubmit(form :NgForm):{
+  
+      }
+   */
 
 
 }

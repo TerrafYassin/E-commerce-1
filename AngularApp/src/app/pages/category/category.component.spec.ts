@@ -44,27 +44,5 @@ describe('Category Page', () => {
     let f = TestBed.createComponent(CartPageComponent);
     cartPageComponent = f.componentInstance;
     f.detectChanges();
-    products = [
-      {
-        "title": "1",
-        "price": 40
-      },
-      {
-        "title": "2",
-        "price": 28
-      }
-    ];
-  });
-
-  it('test shopping cart, add a duplicate item should increment the quantity for that item.', () => {
-    component.addToCart(products[0]);
-    expect(cartPageComponent.cartList).toEqual([{product:products[0],quantity:1}]);
-    expect(cartPageComponent.totalPrice).toEqual(40);
-    component.addToCart(products[0]);
-    expect(cartPageComponent.cartList).toEqual([{product:products[0],quantity:2}]);
-    expect(cartPageComponent.totalPrice).toEqual(80);
-    component.addToCart(products[1]);
-    expect(cartPageComponent.cartList).toEqual([{product:products[0],quantity:2},{product:products[1],quantity:1}]);
-    expect(cartPageComponent.totalPrice).toEqual(108);
-  });
+  })
 });

@@ -2,10 +2,10 @@
 {
     text-align: center;
     height: 80px;
-
-    color: #4d3e3e;
+    background: -webkit-linear-gradient(left, #A9A9A9, #663399);
+    color: #fff;
     font-weight: bold;
-    line-height: 100px;
+    line-height: 80px;
 }
 .form-content
 {
@@ -26,9 +26,3 @@
     background: #663399;
     color: #fff;
 }
-legend {
-    background-color: #efee9d;
-    color: black;
-    padding: 3px 6px;
-}
- 

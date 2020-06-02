@@ -9,25 +9,29 @@ import {TopbarComponent} from "./components/topbar/topbar.component";
 import {CartService} from "./services/cart.service";
 import {CartPopupComponent} from "./pages/cart/cart-popup/cart-popup.component";
 import {ProductService} from "./services/products.service";
+import {HttpClientModule} from "@angular/common/http";
+import { AuthModule } from './pages/auth/auth.module';
 import { GestionUsersComponent } from './pages/admin/gestion_users/gestion_users.component';
 import { Users } from './services/user';
-import{FormsModule} from '@angular/forms';
+import {FormsModule} from "@angular/forms";
+
+
 
 @NgModule({
     declarations: [
         AppComponent,
         TopbarComponent,
-        CartPopupComponent 
-         
-        
-         
+        CartPopupComponent
     ],
     imports: [
         BrowserAnimationsModule,
         BrowserModule,
         HttpModule,
-        RouterModule.forRoot(appRoutes),
-        FormsModule
+        HttpClientModule,
+        AuthModule,
+        FormsModule,
+        RouterModule, // added
+        RouterModule.forRoot(appRoutes)
     ],
     providers: [CartService,ProductService,Users],
     bootstrap: [AppComponent]

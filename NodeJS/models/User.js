@@ -1,15 +1,11 @@
-const cassandra = require('cassandra-driver');
+const mongoose = require('mongoose');
 
-var User = cassandra.model('user', {
-    id:{type:Number},
+var User = mongoose.model('User', {
     first_name: { type: String },
     last_name: { type: String },
-    address: { type: String },
-    email: { type: String },
-    password: {   type: String },
-    contact: {   type: String },
+    email: { type: String, require : true },
+    password: { type: String },
     date: { type: Number, default: Date.now }
-});     
- 
+});
 
 module.exports = { User };
